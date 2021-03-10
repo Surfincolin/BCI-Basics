@@ -1,12 +1,20 @@
 <template>
   <div id="app">
+    <div class='construction'>This site is currently under construction.</div>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/resources">Resources</router-link> |
-      <router-link to="/review">Device Review</router-link> |
-      <router-link to="/bci">What is BCI</router-link> |
-      <router-link to="/eeg">What is EEG</router-link>
+      <div class="head-container">
+        <div class='head-left'>
+          <div class="logo">BCI Basics</div>
+        </div>
+        <div class='head-right'>
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link> |
+          <router-link to="/resources">Resources</router-link> |
+          <router-link to="/review">Device Review</router-link> |
+          <router-link to="/bci">What is BCI</router-link> |
+          <router-link to="/eeg">What is EEG</router-link>
+        </div>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -19,6 +27,14 @@ body {
   background: #202020;
   padding: 0;
   margin: 0;
+}
+
+.construction {
+  width: 100%;
+  background: #FCBB0D;
+  padding: 5px;
+  color: black;
+
 }
 
 #app {
@@ -41,6 +57,28 @@ body {
       color: #FD7D00;
     }
   }
+}
+
+.head-container {
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.head-left {
+  flex: 1 1 auto;
+  text-align: left;
+}
+.head-right {
+  flex: 0 1 auto;
+  text-align: right;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4rem;
 }
 
 .article {
