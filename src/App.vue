@@ -13,6 +13,8 @@
 </template>
 
 <style lang="scss">
+$default-white: #FFFFFF;
+
 body {
   background: #202020;
   padding: 0;
@@ -38,6 +40,21 @@ body {
     &.router-link-exact-active {
       color: #FD7D00;
     }
+  }
+}
+
+.article {
+  max-width: 1024px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+}
+
+a {
+  color: $default-white;
+
+  &:visited {
+    color: #AAAAAA;
   }
 }
 </style>
