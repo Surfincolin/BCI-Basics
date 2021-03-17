@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class='construction'>This site is currently under construction.</div>
+    <!-- <div class='construction'>This site is currently under construction.</div> -->
     <div id="nav">
       <div class="head-container">
         <div class='head-left'>
-          <div class="logo">BCI Basics</div>
+          <div class="logo"><router-link to="/"><img srcset="./assets/bci-basics-logo@2x.png"></router-link></div>
         </div>
         <div class='head-right'>
           <router-link to="/">Home</router-link> |
@@ -46,10 +46,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $white;
+  font-size: 1.2rem;
 }
 
 #nav {
-  padding: 30px;
+  padding: 15px 40px;
   border-bottom: 5px solid  $accent-color;
 
   a {
@@ -76,12 +77,19 @@ body {
 .head-right {
   flex: 0 1 auto;
   text-align: right;
+  margin: auto
 }
 
 .logo {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.4rem;
+  height: 70px;
+  // background-color: blue;
+
+  img {
+    height: 100%;
+  }
 }
 
 .article {
