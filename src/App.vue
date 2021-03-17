@@ -25,7 +25,7 @@
 body {
   background-image: url("./assets/brain-bg-plus.png");
   background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-position: top 50px right 50%; 
   background-color: $bg-color;
   padding: 0;
@@ -95,7 +95,7 @@ a {
   color: $white;
 
   &:visited {
-    color: #AAAAAA;
+    color: $white;
   }
 }
 </style>

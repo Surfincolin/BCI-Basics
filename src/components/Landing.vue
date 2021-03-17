@@ -52,5 +52,6 @@ a {
   max-width: 1024px;
   margin: 0 auto;
   text-align: left;
+  padding: 0 20px;
 }
 </style>
