@@ -8,11 +8,11 @@
         </div>
         <div class='head-right'>
           <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/resources">Resources</router-link> |
-          <router-link to="/review">Device Review</router-link> |
+          <router-link to="/eeg">What is EEG</router-link> |
           <router-link to="/bci">What is BCI</router-link> |
-          <router-link to="/eeg">What is EEG</router-link>
+          <router-link to="/review">Device Review</router-link> |
+          <router-link to="/resources">Resources</router-link> |
+          <router-link to="/about">About</router-link>
         </div>
       </div>
     </div>
@@ -21,10 +21,13 @@
 </template>
 
 <style lang="scss">
-$default-white: #FFFFFF;
 
 body {
-  background: #202020;
+  background-image: url("./assets/brain-bg-plus.png");
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: top 50px right 50%; 
+  background-color: $bg-color;
   padding: 0;
   margin: 0;
 }
@@ -42,19 +45,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #FFFFFF;
+  color: $white;
 }
 
 #nav {
   padding: 30px;
-  border-bottom: 5px solid  #FD7D00;
+  border-bottom: 5px solid  $accent-color;
 
   a {
     font-weight: bold;
-    color: #FFFFFF;
+    color: $white;
 
     &.router-link-exact-active {
-      color: #FD7D00;
+      color: $accent-color;
     }
   }
 }
@@ -89,7 +92,7 @@ body {
 }
 
 a {
-  color: $default-white;
+  color: $white;
 
   &:visited {
     color: #AAAAAA;

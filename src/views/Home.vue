@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img id="brain-img" alt="Vue logo" srcset="../assets/main-brain.png 2x">
+    <!-- <img id="brain-img" alt="Vue logo" srcset="../assets/main-brain.png 2x"> -->
     <Landing msg="Welcome to BCI Basics"/>
   </div>
 </template>

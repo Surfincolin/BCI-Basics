@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "-- Begin Build and Deploy --"
+echo "-- building site --"
+npm run build
+# NOW=$(date +"%m-%d-%y_%T")
+# echo "-- Compressing File --"
+# zip -r "BB-$NOW.zip" dist
+echo "-- deploying --"
+
+## the scp command below should have worked, but could not overwrite files.
+# scp -i ~/bcibasics-dev.pem -r ./dist/ ubuntu@bcibasics.com:/home/ubuntu/deploy/dist/
+## RSYNC over SSH!!!
+rsync --progress -avz -e "ssh -i ~/bcibasics-dev.pem" dist/ ubuntu@bcibasics.com:/home/ubuntu/deploy/dist/
+echo "-- Build and Deploy Complete --"
